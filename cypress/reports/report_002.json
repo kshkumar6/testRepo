@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-05T11:56:11.274Z",
+    "end": "2021-03-05T11:57:13.258Z",
+    "duration": 61984,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "532f12ef-c847-4200-9b80-a0b183ea6bb4",
+      "title": "",
+      "fullFile": "cypress\\integration\\Unibuddy\\LiveFeedMessage.js",
+      "file": "cypress\\integration\\Unibuddy\\LiveFeedMessage.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b2fe0545-fbd6-490a-897f-83877aa186a0",
+          "title": "To test the feature of live feed",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should validate left panel of live feed",
+              "fullTitle": "To test the feature of live feed Should validate left panel of live feed",
+              "timedOut": null,
+              "duration": 14341,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.sc-fzoLsD > :nth-child(2) > .sc-AxjAm > :nth-child(1) > .sc-AxhCb > .sc-AxhUy').should('have.text', 'TestUser TestUserLname');\ncy.get(':nth-child(1) > .sc-fzoant > .sc-fzplWN > .sc-fznMnq').should('contain', 'staff').click();\ncy.get('aside > :nth-child(1) > :nth-child(1) > .sc-fzplWN > .sc-AxhCb > .sc-AxhUy').should('have.text', \"Channel Info\");\ncy.get('.bPPRtl > .sc-fzoJus > .sc-fzplWN > .sc-AxhCb > .sc-AxhUy').click();\ncy.get('.ja-DzmH > .sc-fzplWN > .sc-AxhCb > .sc-AxhUy').should('have.text', 'No messages have been pinned yet!');\ncy.get(':nth-child(3) > .sc-fzoJus > .sc-fzplWN > .sc-AxhCb > .sc-AxhUy').should('have.text', 'Prospective students').click();\ncy.get(':nth-child(3) > section > .sc-fzplWN').should('have.text', '103 other students are following the #staff live feed.');",
+              "err": {},
+              "uuid": "c945db6a-9fd5-417d-a5aa-47a5b41282fd",
+              "parentUUID": "b2fe0545-fbd6-490a-897f-83877aa186a0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should check live feed",
+              "fullTitle": "To test the feature of live feed Should check live feed",
+              "timedOut": null,
+              "duration": 7994,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.sc-fzoLsD > :nth-child(2) > .sc-AxjAm > :nth-child(1) > .sc-AxhCb > .sc-AxhUy').should('have.text', 'TestUser TestUserLname');\ncy.get(':nth-child(1) > .sc-fzoant > .sc-fzplWN > .sc-fznMnq').should('contain', 'staff').click(); // cy.get('#chat-text-input').type(\"Test\",{ force: true })",
+              "err": {},
+              "uuid": "cf05ca11-3e5d-419e-9906-24ae13a40dd5",
+              "parentUUID": "b2fe0545-fbd6-490a-897f-83877aa186a0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should like a live message feed",
+              "fullTitle": "To test the feature of live feed Should like a live message feed",
+              "timedOut": null,
+              "duration": 9329,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.sc-fzoLsD > :nth-child(2) > .sc-AxjAm > :nth-child(1) > .sc-AxhCb > .sc-AxhUy').should('have.text', 'TestUser TestUserLname');\ncy.get(':nth-child(1) > .sc-fzoant > .sc-fzplWN > .sc-fznMnq').should('contain', 'staff').click();\ncy.get('[data-test-id=\"like-button\"]').should('be.hidden').invoke('show');",
+              "err": {},
+              "uuid": "841b1589-d7d8-4be8-bfc8-8545f44b29bc",
+              "parentUUID": "b2fe0545-fbd6-490a-897f-83877aa186a0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c945db6a-9fd5-417d-a5aa-47a5b41282fd",
+            "cf05ca11-3e5d-419e-9906-24ae13a40dd5",
+            "841b1589-d7d8-4be8-bfc8-8545f44b29bc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31664,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

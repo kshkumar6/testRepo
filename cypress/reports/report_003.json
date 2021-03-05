@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-05T11:57:15.942Z",
+    "end": "2021-03-05T11:57:41.406Z",
+    "duration": 25464,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "70577a8c-aea5-4f6f-88ae-97fd7f8c3932",
+      "title": "",
+      "fullFile": "cypress\\integration\\Unibuddy\\Login.js",
+      "file": "cypress\\integration\\Unibuddy\\Login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b64f1a86-83b9-46c0-858c-793d0e3d81d2",
+          "title": "Unibuddy login feature test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login",
+              "fullTitle": "Unibuddy login feature test should login",
+              "timedOut": null,
+              "duration": 12067,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://events-staging.unibuddy.co/your-university/my-first-event/');\ncy.get('._2U8E > :nth-child(2)').should('contain', 'welcome');\ncy.get(':nth-child(2) > ._1KQ0').should('have.text', 'New to Unibuddy?');\ncy.get(':nth-child(1) > ._3wAa').click();\ncy.get('#email').type(\"testuser5@gmail.com\");\ncy.get('#password').type(\"TestUser\");\ncy.get('#login').click();\ncy.get('h1').should('have.text', 'Welcome');\ncy.get('.sc-fzoLsD > :nth-child(2) > .sc-AxjAm > :nth-child(1) > .sc-AxhCb > .sc-AxhUy').should('have.text', 'TestUser TestUserLname');\ncy.logout('https://events-staging.unibuddy.co/your-university/my-first-event/');",
+              "err": {},
+              "uuid": "f79de3c4-1d66-4f47-90a6-033e1877c553",
+              "parentUUID": "b64f1a86-83b9-46c0-858c-793d0e3d81d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should throw error message for wrong credential",
+              "fullTitle": "Unibuddy login feature test Should throw error message for wrong credential",
+              "timedOut": null,
+              "duration": 10592,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://events-staging.unibuddy.co/your-university/my-first-event/');\ncy.get('._2U8E > :nth-child(2)').should('contain', 'welcome');\ncy.get(':nth-child(2) > ._1KQ0').should('have.text', 'New to Unibuddy?');\ncy.get(':nth-child(1) > ._3wAa').click();\ncy.get('#email').type(\"testuser5@gmail.com\");\ncy.get('#password').type(\"TestUser1\");\ncy.get('#login').click();\ncy.get('.kOkz').should('have.text', 'Wrong Username or Password');",
+              "err": {},
+              "uuid": "6e18513c-9bbe-424d-8942-1eb4f2c40d08",
+              "parentUUID": "b64f1a86-83b9-46c0-858c-793d0e3d81d2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f79de3c4-1d66-4f47-90a6-033e1877c553",
+            "6e18513c-9bbe-424d-8942-1eb4f2c40d08"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22659,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

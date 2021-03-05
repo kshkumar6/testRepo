@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-05T11:57:51.090Z",
+    "end": "2021-03-05T11:58:29.550Z",
+    "duration": 38460,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2bd8bd75-3683-4b08-a6bb-340275cacf53",
+      "title": "",
+      "fullFile": "cypress\\integration\\Unibuddy\\Signup.js",
+      "file": "cypress\\integration\\Unibuddy\\Signup.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2ce2f4e9-d886-4bf4-9060-f3ebc7c60d32",
+          "title": "Script to test sign up",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should signup",
+              "fullTitle": "Script to test sign up should signup",
+              "timedOut": null,
+              "duration": 29045,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://events-staging.unibuddy.co/your-university/my-first-event/');\ncy.get(':nth-child(2) > ._3wAa').click();\ncy.get('#first-name').type(\"TestUser\");\ncy.get('#last-name').type(\"TestUserLname\");\nvar userEmail = userID_Alpha();\ncy.get('#email').type(userEmail);\ncy.get('#password').type(\"TestUser\");\ncy.get('#confirm-password').type(\"TestUser\");\ncy.get('#privacy').click();\ncy.get('#continue').click();\ncy.get('#dateOfEntry').select('September 2021');\ncy.get('#country').type('Canada');\ncy.wait(10);\ncy.get('#rbt-menu-item-0').click();\ncy.get('#degree-level').select('a');\ncy.get('#degrees').type('Computer Science');\ncy.get('#rbt-menu-item-0').click();\ncy.get('#marketing').click();\ncy.get('#continue').click();\ncy.get('h1').should('have.text', 'Welcome');\ncy.get('.sc-fzoLsD > :nth-child(2) > .sc-AxjAm > :nth-child(1) > .sc-AxhCb > .sc-AxhUy').should('have.text', 'TestUser TestUserLname');\ncy.logout('https://events-staging.unibuddy.co/your-university/my-first-event/');",
+              "err": {},
+              "uuid": "54186af5-6e08-4a69-bd27-d74cde92f472",
+              "parentUUID": "2ce2f4e9-d886-4bf4-9060-f3ebc7c60d32",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "54186af5-6e08-4a69-bd27-d74cde92f472"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 29045,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

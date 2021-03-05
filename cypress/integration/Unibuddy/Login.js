@@ -1,0 +1,26 @@
+describe('Unibuddy login feature test',()=>{
+    it('should login', ()=>{
+        cy.visit('https://events-staging.unibuddy.co/your-university/my-first-event/')
+        cy.get('._2U8E > :nth-child(2)').should('contain','welcome')
+        cy.get(':nth-child(2) > ._1KQ0').should('have.text','New to Unibuddy?')
+        cy.get(':nth-child(1) > ._3wAa').click()
+        cy.get('#email').type("testuser5@gmail.com")
+        cy.get('#password').type("TestUser")
+        cy.get('#login').click()
+        cy.get('h1').should('have.text','Welcome')
+        cy.get('.sc-fzoLsD > :nth-child(2) > .sc-AxjAm > :nth-child(1) > .sc-AxhCb > .sc-AxhUy')
+        .should('have.text','TestUser TestUserLname')
+        cy.logout('https://events-staging.unibuddy.co/your-university/my-first-event/')
+    })
+
+    it('Should throw error message for wrong credential',()=>{
+        cy.visit('https://events-staging.unibuddy.co/your-university/my-first-event/')
+        cy.get('._2U8E > :nth-child(2)').should('contain','welcome')
+        cy.get(':nth-child(2) > ._1KQ0').should('have.text','New to Unibuddy?')
+        cy.get(':nth-child(1) > ._3wAa').click()
+        cy.get('#email').type("testuser5@gmail.com")
+        cy.get('#password').type("TestUser1")
+        cy.get('#login').click()
+        cy.get('.kOkz').should('have.text','Wrong Username or Password')
+    })
+})

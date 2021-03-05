@@ -1,0 +1,18 @@
+{
+  "name": "cypress-scripts",
+  "version": "1.0.0",
+  "description": "This package contains test cases for unibuddy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akshay Kumar",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^6.6.0",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
+  }
+}
